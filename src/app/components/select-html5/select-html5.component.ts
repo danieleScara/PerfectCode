@@ -13,11 +13,11 @@ export class SelectHtml5Component implements OnInit {
   @Input() public values: IPerson[];
   @Input() public value: IPerson;
   @Input() public label: string;
-  @ViewChild('dropButton') dropButton: ElementRef;
+  @ViewChild('dropButton') private dropButton: ElementRef;
 
   protected editedPerson: IPerson;
-  protected isDropOpen: boolean = false;
   protected highlightedPerson: IPerson;
+  protected isDropOpen: boolean = false;
   protected isInsertMode: boolean = true;
   protected formTitle: string = "Insert";
   protected generatedId: number;
